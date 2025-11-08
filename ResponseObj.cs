@@ -4,51 +4,52 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("word")]
-    public string word { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("word")]
+        public string Word { get; set; }
 
-    [JsonProperty("isAlphagram")]
-    public bool isAlphagram { get; set; }
+        [JsonProperty("isAlphagram")]
+        public bool IsAlphagram { get; set; }
 
-    [JsonProperty("sortedForm")]
-    public string sortedForm { get; set; }
+        [JsonProperty("sortedForm")]
+        public string SortedForm { get; set; }
 
-    [JsonProperty("isPalindrome")]
-    public bool isPalindrome { get; set; }
+        [JsonProperty("isPalindrome")]
+        public bool IsPalindrome { get; set; }
 
-    [JsonProperty("hasAnagram")]
-    public bool hasAnagram { get; set; }
+        [JsonProperty("hasAnagram")]
+        public bool HasAnagram { get; set; }
 
-    [JsonProperty("isIsogram")]
-    public bool isIsogram { get; set; }
+        [JsonProperty("isIsogram")]
+        public bool IsIsogram { get; set; }
 
-    [JsonProperty("isPangramCandidate")]
-    public bool isPangramCandidate { get; set; }
+        [JsonProperty("isPangramCandidate")]
+        public bool IsPangramCandidate { get; set; }
 
-    [JsonProperty("isScrabbleValid")]
-    public bool isScrabbleValid { get; set; }
+        [JsonProperty("isScrabbleValid")]
+        public bool IsScrabbleValid { get; set; }
 
-    [JsonProperty("canBePalindromeAnagram")]
-    public bool canBePalindromeAnagram { get; set; }
+        [JsonProperty("canBePalindromeAnagram")]
+        public bool CanBePalindromeAnagram { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
